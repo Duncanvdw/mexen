@@ -3,10 +3,10 @@ function locked1() {
     var lock = document.getElementById("lock1");
     var currentSrc = lock.getAttribute("src");
 
-    if (currentSrc === './unlock.png') {
-        lock.setAttribute("src", "./lock.png");
+    if (currentSrc === './images/unlock.png') {
+        lock.setAttribute("src", "./images/lock.png");
     } else {
-        lock.setAttribute("src", "./unlock.png");
+        lock.setAttribute("src", "./images/unlock.png");
     }
 }
 
@@ -15,10 +15,10 @@ function locked2() {
     var lock = document.getElementById("lock2");
     var currentSrc = lock.getAttribute("src");
 
-    if (currentSrc === './unlock.png') {
-        lock.setAttribute("src", "./lock.png");
+    if (currentSrc === './images/unlock.png') {
+        lock.setAttribute("src", "./images/lock.png");
     } else {
-        lock.setAttribute("src", "./unlock.png");
+        lock.setAttribute("src", "./images/unlock.png");
     }
 }
 
@@ -33,7 +33,7 @@ function gooien() {
     countPlus()
     
 
-    if (lockcheck1 === './lock.png') {
+    if (lockcheck1 === './images/lock.png') {
         
     } else {
         if (dobbel1 == 1) {
@@ -51,7 +51,7 @@ function gooien() {
         }
     }
 
-    if (lockcheck2 === './lock.png') {
+    if (lockcheck2 === './images/lock.png') {
 
     } else {
         if (dobbel2 == 1) {
@@ -90,76 +90,76 @@ function reset() {
     button.style.visibility = "visible";
 
     const IMG = document.getElementById("IMG");
-    IMG.setAttribute("src", "MEX.png")
+    IMG.setAttribute("src", "./images/MEX.png")
     
     const Image = document.getElementById("Image");
-    Image.setAttribute("src", "EN.png")
+    Image.setAttribute("src", "./images/EN.png")
 
     const lockreset1 = document.getElementById("lock1");
-    lockreset1.setAttribute("src", "./unlock.png")
+    lockreset1.setAttribute("src", "./images/unlock.png")
 
     const lockreset2 = document.getElementById("lock2");
-    lockreset2.setAttribute("src", "./unlock.png")
+    lockreset2.setAttribute("src", "./images/unlock.png")
 }
 
 // dobbelsteen 1
 function getal1() {
     var ogen1 = document.getElementById("IMG");
-    ogen1.setAttribute("src", "1.jpg");
+    ogen1.setAttribute("src", "./images/1.jpg");
 }
 
 function getal2() {
     var ogen2 = document.getElementById("IMG");
-    ogen2.setAttribute("src", "2.jpg");
+    ogen2.setAttribute("src", "./images/2.jpg");
 }
 
 function getal3() {
     var ogen3 = document.getElementById("IMG");
-    ogen3.setAttribute("src", "3.jpg");
+    ogen3.setAttribute("src", "./images/3.jpg");
 }
 
 function getal4() {
     var ogen4 = document.getElementById("IMG");
-    ogen4.setAttribute("src", "4.jpg");
+    ogen4.setAttribute("src", "./images/4.jpg");
 }
 
 function getal5() {
     var ogen5 = document.getElementById("IMG");
-    ogen5.setAttribute("src", "5.jpg");
+    ogen5.setAttribute("src", "./images/5.jpg");
 }
 
 function getal6() {
     var ogen6 = document.getElementById("IMG");
-    ogen6.setAttribute("src", "6.jpg");
+    ogen6.setAttribute("src", "./images/6.jpg");
 }
 
 // dobbelsteen 2
 function nummer1() {
     var oog1 = document.getElementById("Image");
-    oog1.setAttribute("src", "1.jpg");
+    oog1.setAttribute("src", "./images/1.jpg");
 }
 
 function nummer2() {
     var oog2 = document.getElementById("Image");
-    oog2.setAttribute("src", "2.jpg");
+    oog2.setAttribute("src", "./images/2.jpg");
 }
 
 function nummer3() {
     var oog3 = document.getElementById("Image");
-    oog3.setAttribute("src", "3.jpg");
+    oog3.setAttribute("src", "./images/3.jpg");
 }
 
 function nummer4() {
     var oog4 = document.getElementById("Image");
-    oog4.setAttribute("src", "4.jpg");
+    oog4.setAttribute("src", "./images/4.jpg");
 }
 
 function nummer5() {
     var oog5 = document.getElementById("Image");
-    oog5.setAttribute("src", "5.jpg");
+    oog5.setAttribute("src", "./images/5.jpg");
 }
 
 function nummer6() {
     var oog6 = document.getElementById("Image");
-    oog6.setAttribute("src", "6.jpg");
+    oog6.setAttribute("src", "./images/6.jpg");
 }
