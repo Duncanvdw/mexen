@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="mexen.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Slokje!</title>
+</head>
+<body>
+    <section>
+        <button class="button-55" onclick="my_modal_3.showModal()">?</button>
+        <dialog id="my_modal_3" class="modal">
+        <div class="lg:w-[700px] sm:w-[350px] overflow-hidden" id="button-55">
+            <form method="dialog">
+                <button class="btn btn-sm btn-circle btn-ghost absolute right-6 top-6">✕</button>
+            </form>
+            <h3 class="font-extrabold text-2xl">Mex handboek 101</h3>
+            <p class="py-2">Zorg voor 2 dobbelstenen (Voor IRL, hier heb je ze al)</p>
+            <p class="py-2">Gooi de dobbelstenen</p>
+            <p class="py-2">Als je gooit en je gooit een 4 en een 6 heb je een score van 64. Dit betekent de hoogste dobbelsteen eerst en dan de laagste</p>
+            <p class="py-2">Degene die begint mag bepalen voor de hele ronde hoevaak er gegooid mag worden</p>
+            <p class="py-2">Als er dubbel wordt gegooid, dus bijv. 3 en 3 is het 300, 4 en 4 = 400</p>
+            <p class="py-2">Als er dubbel 1 wordt gegooid zit je in de club van 100. Telkens als iemand dan in de volgende rondes een dubbel gooit moet je drinken. Als iemand dus 300 gooit moet je dus 3 slokken nemen, bij dubbel 6 dus 6 slokken. Degene die in de club van 100 zit gaat er pas uit als iemand anders 100 gooit. Als het voorkomt dat 2 mensen in dezelfde ronde 100 gooien zitten ze samen in de club van 100</p>
+            <p class="py-2">Degene die verliest moet 1 slok nemen</p>
+            <p class="py-2">als er 21 wordt gegooid komen er 5 slokken bij de verliezer en daarbij is 21 dus het hoogst</p>
+        </div>
+        </dialog>
+    </section>
+    <section>
+        <div class="w-full h-full mt-40 flex justify-center items-center flex-col">
+            <input class="button-55" type="button" id="gooi" value="Gooi de dobbelstenen" onclick="gooien()">
+            <div class="flex justify-center items-center flex-row mt-10">
+                <div class="flex flex-col justify-center items-center">
+                    <img src="MEX.png" id="IMG" alt="dobbelsteen">
+                    <a onclick="locked1()"><img id='lock1' class='w-10' src='./unlock.png'></a>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <img src="EN.png" id="Image" alt="dobbelsteen">
+                    <a onclick="locked2()"><img id='lock2' class='w-10' src='./unlock.png'></a>
+                </div>
+            </div>
+            <p id="countDisplay" class="text-xl font-bold my-5">Throws: 0</p>
+            <input class="button-55" type="button" id="reset" value="Reset" onclick="reset()">  
+        </div>
+    </section>
+</body>
+</html>
