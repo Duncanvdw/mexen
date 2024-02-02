@@ -75,3 +75,23 @@
   touch-action: manipulation;
   overflow: hidden;
 }
+
+#Image {
+  max-width: 100%;
+  height: auto;
+}
+
+#IMG {
+  max-width: 100%;
+  height: auto;
+}
+
+#lock1 {
+  max-width: 40px;
+  height: auto;
+}
+
+#lock2 {
+  max-width: 40px;
+  height: auto;
+}
