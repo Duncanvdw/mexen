@@ -77,8 +77,10 @@ function animateDice(diceId, finalValue, scene, onComplete) {
 
         const x = startX + (target.x - startX) * p;
         const y = startY + (target.y - startY) * p;
+        const tf = `translateZ(-75px) rotateX(${x}deg) rotateY(${y}deg)`;
 
-        cube.style.transform = `translateZ(-75px) rotateX(${x}deg) rotateY(${y}deg)`;
+        cube.style.transform = tf;
+        cube.style.webkitTransform = tf;
 
         if (t < 1) {
             requestAnimationFrame(step);
@@ -225,8 +227,11 @@ function reset() {
     currentDice[2] = null;
     updateScoreDisplay();
 
-    document.getElementById("diceInner1").style.transform = 'translateZ(-75px) rotateX(0deg) rotateY(0deg)';
-    document.getElementById("diceInner2").style.transform = 'translateZ(-75px) rotateX(0deg) rotateY(0deg)';
+    const resetT = 'translateZ(-75px) rotateX(0deg) rotateY(0deg)';
+    document.getElementById("diceInner1").style.transform = resetT;
+    document.getElementById("diceInner1").style.webkitTransform = resetT;
+    document.getElementById("diceInner2").style.transform = resetT;
+    document.getElementById("diceInner2").style.webkitTransform = resetT;
 
     document.getElementById("lock1").setAttribute("src", "./images/unlock.png");
     document.getElementById("lock2").setAttribute("src", "./images/unlock.png");
