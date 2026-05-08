@@ -6,6 +6,7 @@
     <meta name="description" content="This is a fun game you can play with your friends and drink">
     <script type="text/javascript" src="mexen.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Slokje!</title>
 </head>
@@ -30,18 +31,85 @@
         </dialog>
     </section>
     <section>
-        <div class="w-full h-full mt-40 flex justify-center items-center flex-col">
+        <div class="w-full h-full mt-28 flex justify-center items-center flex-col">
             <input class="button-55" type="button" id="gooi" value="Gooi de dobbelstenen" onclick="gooien()">
             <div class="flex justify-center items-center flex-row mt-10">
                 <div class="flex flex-col justify-center items-center">
-                    <img src="./images/MEX.png" id="IMG" alt="dobbelsteen">
-                    <div onclick="locked1()"><img id='lock1' class='w-10' src='./images/unlock.png' alt="lock"></div>
+                    <div class="dice-scene" id="diceScene1">
+                        <div class="dice-cube" id="diceInner1">
+                            <div class="face face--front">
+                                <span></span><span></span><span></span>
+                                <span></span><span class="dot"></span><span></span>
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="face face--back">
+                                <span class="dot"></span><span></span><span class="dot"></span>
+                                <span class="dot"></span><span></span><span class="dot"></span>
+                                <span class="dot"></span><span></span><span class="dot"></span>
+                            </div>
+                            <div class="face face--right">
+                                <span></span><span></span><span class="dot"></span>
+                                <span></span><span class="dot"></span><span></span>
+                                <span class="dot"></span><span></span><span></span>
+                            </div>
+                            <div class="face face--left">
+                                <span class="dot"></span><span></span><span class="dot"></span>
+                                <span></span><span></span><span></span>
+                                <span class="dot"></span><span></span><span class="dot"></span>
+                            </div>
+                            <div class="face face--top">
+                                <span class="dot"></span><span></span><span class="dot"></span>
+                                <span></span><span class="dot"></span><span></span>
+                                <span class="dot"></span><span></span><span class="dot"></span>
+                            </div>
+                            <div class="face face--bottom">
+                                <span></span><span></span><span class="dot"></span>
+                                <span></span><span></span><span></span>
+                                <span class="dot"></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lock-disabled" onclick="locked1()"><img id='lock1' src='./images/unlock.png' alt="lock"></div>
                 </div>
                 <div class="flex flex-col justify-center items-center">
-                    <img src="./images/EN.png" id="Image" alt="dobbelsteen">
-                    <div onclick="locked2()"><img id='lock2' class='w-10' src='./images/unlock.png' alt="lock"></div>
+                    <div class="dice-scene" id="diceScene2">
+                        <div class="dice-cube" id="diceInner2">
+                            <div class="face face--front">
+                                <span></span><span></span><span></span>
+                                <span></span><span class="dot"></span><span></span>
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="face face--back">
+                                <span class="dot"></span><span></span><span class="dot"></span>
+                                <span class="dot"></span><span></span><span class="dot"></span>
+                                <span class="dot"></span><span></span><span class="dot"></span>
+                            </div>
+                            <div class="face face--right">
+                                <span></span><span></span><span class="dot"></span>
+                                <span></span><span class="dot"></span><span></span>
+                                <span class="dot"></span><span></span><span></span>
+                            </div>
+                            <div class="face face--left">
+                                <span class="dot"></span><span></span><span class="dot"></span>
+                                <span></span><span></span><span></span>
+                                <span class="dot"></span><span></span><span class="dot"></span>
+                            </div>
+                            <div class="face face--top">
+                                <span class="dot"></span><span></span><span class="dot"></span>
+                                <span></span><span class="dot"></span><span></span>
+                                <span class="dot"></span><span></span><span class="dot"></span>
+                            </div>
+                            <div class="face face--bottom">
+                                <span></span><span></span><span class="dot"></span>
+                                <span></span><span></span><span></span>
+                                <span class="dot"></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lock-disabled" onclick="locked2()"><img id='lock2' src='./images/unlock.png' alt="lock"></div>
                 </div>
             </div>
+            <p id="scoreDisplay" class="score-display"></p>
             <p id="countDisplay" class="text-xl font-bold my-5">Throws: 0</p>
             <input class="button-55" type="button" id="reset" value="Reset" onclick="reset()">  
         </div>
